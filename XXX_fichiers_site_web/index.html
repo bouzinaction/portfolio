@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matéo (Siir Marcel) — Portfolio Audio & Musique</title>
+
+  <!-- Typography: Space Grotesk (Ableton / Modernist feel) & JetBrains Mono (Tech / Audio details) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       TOP HEADER (Minimalist, Ableton-style with Koru Logo)
+       ======================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-group">
+        <img src="../7_logo_koru/koru_white_bg-removebg-preview.png" alt="Logo Koru" class="koru-logo">
+        <a href="#moi" class="brand-name">
+          <strong>Matéo</strong> <span class="brand-alias">(Siir Marcel)</span>
+        </a>
+      </div>
+
+      <nav class="site-nav" aria-label="Sommaire">
+        <a href="#moi" class="nav-link active" data-target="moi"><span class="nav-num">01</span> <span data-i18n="nav_moi">Moi</span></a>
+        <a href="#influences" class="nav-link" data-target="influences"><span class="nav-num">02</span> <span data-i18n="nav_influences">Influences</span></a>
+        <a href="#projets" class="nav-link" data-target="projets"><span class="nav-num">03</span> <span data-i18n="nav_projets">Projets</span></a>
+        <a href="#lutherie" class="nav-link" data-target="lutherie"><span class="nav-num">04</span> <span data-i18n="nav_lutherie">Lutherie</span></a>
+        <a href="#en-cours" class="nav-link" data-target="en-cours"><span class="nav-num">05</span> <span data-i18n="nav_encours">En cours</span></a>
+        <a href="#perspectives" class="nav-link" data-target="perspectives"><span class="nav-num">06</span> <span data-i18n="nav_perspectives">Perspectives</span></a>
+        <a href="#contact" class="nav-link" data-target="contact"><span class="nav-num">07</span> <span data-i18n="nav_contact">Contact</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher (FR / EN) -->
+        <button class="lang-switch-btn" id="lang-toggle-btn" aria-label="Changer de langue">
+          <span class="lang-opt lang-fr active">FR</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-opt lang-en">EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       MAIN PRESENTATION FLOW (Diaporama Storytelling Flow)
+       ======================================================== -->
+  <main class="slides-container">
+
+    <!-- ----------------------------------------------------
+         SLIDE 01 : MOI (Bio & Démarche)
+         ---------------------------------------------------- -->
+    <section class="slide-section" id="moi">
+      <div class="slide-inner">
+        <div class="section-label-bar">
+          <span class="section-index">01</span>
+          <h2 class="section-title" data-i18n="title_moi">Moi</h2>
+        </div>
+
+        <div class="slide-grid-moi">
+          <div class="moi-text-col">
+            <h1 class="hero-name">Siir Marcel</h1>
+            <div class="raw-content-block" data-i18n="moi_body">
+              <p>Je m'appelle Matéo, aka Siir Marcel.</p>
+              <p>J'ai 22 ans et j'ai toujours été passionné par la musique. Tout a commencé quand mon petit frère a reçu une guitare en jouet quand on était petits. J'étais tellement jaloux de lui que je la lui volais tout le temps, juste pour essayer de comprendre comment ça pouvait bien fonctionner. Mes parents voyant cela ont fini par m'inscrire dans une école de musique, mais je n'y suis resté qu'un an. J'ai ensuite pris quelques cours de guitare électrique car j'adorais le rock, mais j'ai fini par apprendre majoritairement en autodidacte. Je m'enregistrais sur GarageBand et je jouais avec mon tonton qui fait de la guitare aussi ! Il m'a appris mes premiers morceaux vraiment cool !</p>
+              <p>J'ai découvert le piano au lycée. Je suis véritablement tombé amoureux de cet instrument et, malgré le fait de ne jamais avoir pris de cours, cela m'a tout naturellement guidé vers la découverte des synthétiseurs. Mon tout premier fut un Korg Minilogue !</p>
+              <p>J'ai toujours aimé composer mes propres musiques, mais je me suis véritablement lancé quand j'ai acheté Ableton Live 10 vers le printemps 2020. Je n'ai pas changé de version depuis !</p>
+              <p>Au fur et à mesure, j'ai commencé à créer des morceaux de plus en plus aboutis, jusqu'à donner vie à mes deux premiers projets (que je présenterai plus tard).</p>
+              <p class="highlight-quote">La composition est clairement bien plus qu'un passe-temps pour moi : c'est littéralement ce qui occupe la majorité de mon temps libre (le temps restant est passé à écouter de la musique). Malgré le fait de m'être lancé dans des études de mécanique à la sortie du lycée (ce qui m'a permis de travailler dans la Formule 1 et de toucher du doigt un premier rêve), j'ai toujours gardé au fond de moi l'idée de lier mon activité professionnelle à la musique.</p>
+              <p>Aujourd'hui, j'espère concrétiser cet objectif !</p>
+            </div>
+          </div>
+
+          <div class="moi-photo-col">
+            <div class="moi-photo-box">
+              <img src="../1_moi/photo_de_moi.jpg" alt="Matéo (Siir Marcel)" class="zoom-image moi-photo-img" data-caption="Matéo (Siir Marcel)">
+              <span class="img-legend">Matéo — Siir Marcel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SLIDE 02 : INFLUENCES MUSICALES (Carrés avec Flip au dos)
+         ---------------------------------------------------- -->
+    <section class="slide-section" id="influences">
+      <div class="slide-inner">
+        <div class="section-label-bar">
+          <span class="section-index">02</span>
+          <h2 class="section-title" data-i18n="title_influences">Influences musicales</h2>
+        </div>
+
+        <p class="section-intro-text" data-i18n="influences_intro">
+          Voici quelques-uns de mes artistes favoris qui sont aussi mes principales influences. Je pourrais en ajouter des dizaines, mais j'ai essayé de choisir ceux avec qui j'ai un affect particulier, que j'écoute depuis longtemps, qui m'ont influencé artistiquement et pour qui j'ai des anecdotes !
+        </p>
+
+        <!-- 5 Carrés avec interaction de bascule (Daft Punk, Aphex, Pink Floyd, Radiohead, Tyler) -->
+        <div class="influences-flip-grid">
+          
+          <!-- 1. Daft Punk -->
+          <div class="flip-card-wrapper card-daft" tabindex="0">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="../2_influences%20musicales/daft_punk/DaftPunk_HomeworkLP.jpg" alt="Daft Punk" class="artist-square-img">
+                <div class="artist-front-overlay">
+                  <span class="artist-num">01</span>
+                  <h3 class="artist-title">Daft Punk</h3>
+                  <span class="flip-hint" data-i18n="flip_hint">survoler pour lire &rarr;</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="back-header back-daft">
+                  <h4 class="back-artist-name">Daft Punk</h4>
+                </div>
+                <div class="back-text-scroll">
+                  <p data-i18n="daft_text">Ce que j'aime chez Daft Punk, c'est d'abord le fait que ce soit des Français qui ont réussi à hypnotiser le monde de la musique à l'international comme rarement dans l'histoire. Leur son est immédiatement reconnaissable, ils ont réussi à faire des hits avec des samples très courts tournant en boucle, je pense notamment à « Fresh » qui fait partie pour moi de leurs meilleurs morceaux. C'est dans ce domaine qu'ils excellent de mon point de vue, car c'est aussi complexe de composer un morceau « simple » dont on ne se lasse jamais qui ne fait que quelques pistes que de composer avec des arrangements complexes. Ils ont su faire les deux comme le montrent Homework et Random Access Memories. Ils sont trop forts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Aphex Twin -->
+          <div class="flip-card-wrapper card-aphex" tabindex="0">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="../2_influences%20musicales/aphex_twin/Aphex%20Twin%20logo.gif" alt="Aphex Twin" class="artist-square-img">
+                <div class="artist-front-overlay">
+                  <span class="artist-num">02</span>
+                  <h3 class="artist-title">Aphex Twin</h3>
+                  <span class="flip-hint" data-i18n="flip_hint">survoler pour lire &rarr;</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="back-header back-aphex">
+                  <h4 class="back-artist-name">Aphex Twin</h4>
+                </div>
+                <div class="back-text-scroll">
+                  <p data-i18n="aphex_text">Ce que j'aime chez Aphex Twin, ce sont ses sonorités ambient, le sound design et le fait qu'il soit capable de proposer sur un même album une magnifique et iconique ballade au piano comme « Avril 14th », puis des sonorités complètement chaotiques, complexes et percussives. J'aime également le fait qu'il soit impliqué dans la création de ses propres machines et logiciels : son logiciel « Samplebrain » développé avec Dave Griffiths m'a d'ailleurs beaucoup inspiré pour créer mon propre logiciel « Machina ».</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Pink Floyd -->
+          <div class="flip-card-wrapper card-pink" tabindex="0">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="../2_influences%20musicales/pink_floyd/d2fc536_6401-1e6ijhq.m233.avif" alt="Pink Floyd" class="artist-square-img">
+                <div class="artist-front-overlay">
+                  <span class="artist-num">03</span>
+                  <h3 class="artist-title">Pink Floyd</h3>
+                  <span class="flip-hint" data-i18n="flip_hint">survoler pour lire &rarr;</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="back-header back-pink">
+                  <h4 class="back-artist-name">Pink Floyd</h4>
+                </div>
+                <div class="back-text-scroll">
+                  <p data-i18n="pink_text">Ce que j'aime chez Pink Floyd, c'est la progressivité de leur musique. Je suis à chaque fois émerveillé devant à quel point leurs morceaux me font rentrer dans une bulle et comment toutes les parties s'enchaînent si naturellement. J'ai d'ailleurs récupéré la platine vinyle Sony stéréo de ma grand-mère, et elle m'a aussi donné son vinyle de l'album Wish You Were Here (au passage aussi ma chanson préférée) qui date de la fin des 70s !</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Radiohead -->
+          <div class="flip-card-wrapper card-radiohead" tabindex="0">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="../2_influences%20musicales/radiohead/the-current-radiohead-logo-remade-in-crisp-4k-v0-cpv5992jfwne1.png" alt="Radiohead" class="artist-square-img">
+                <div class="artist-front-overlay">
+                  <span class="artist-num">04</span>
+                  <h3 class="artist-title">Radiohead</h3>
+                  <span class="flip-hint" data-i18n="flip_hint">survoler pour lire &rarr;</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="back-header back-radiohead">
+                  <h4 class="back-artist-name">Radiohead</h4>
+                </div>
+                <div class="back-text-scroll">
+                  <p data-i18n="radiohead_text">Ce que j'aime chez Radiohead, c'est souvent l'émotion que leur musique me procure. Un des premiers morceaux que mon tonton me jouait à la guitare c'était « Just », et j'étais émerveillé par la façon dont ce morceau sonnait différemment du rock que j'écoutais étant petit (j'étais plutôt à fond sur les Guns N' Roses dès le matin dans le train direction le collège). C'est vers la fin de l'adolescence que j'ai vraiment commencé à apprécier leur musique. J'ai eu la chance de les voir en concert à Berlin et j'ai retrouvé cette sensation si particulière d'envoûtement et de frisson sur presque chacun de leurs morceaux (je n'ai d'ailleurs toujours pas compris comment Thom Yorke arrive à jouer + chanter « Pyramid Song » en live). Il y a quelque chose de pur et vulnérable mais puissant, autant dans la personnalité du groupe que dans leur musique.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Tyler, The Creator -->
+          <div class="flip-card-wrapper card-tyler" tabindex="0">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="../2_influences%20musicales/Tyler_the_creator/2048.webp" alt="Tyler the Creator" class="artist-square-img">
+                <div class="artist-front-overlay">
+                  <span class="artist-num">05</span>
+                  <h3 class="artist-title">Tyler, The Creator</h3>
+                  <span class="flip-hint" data-i18n="flip_hint">survoler pour lire &rarr;</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="back-header back-tyler">
+                  <h4 class="back-artist-name">Tyler, The Creator</h4>
+                </div>
+                <div class="back-text-scroll">
+                  <p data-i18n="tyler_text">Ce que j'aime chez Tyler, The Creator, ce sont les univers différents qu'il est capable de créer pour chacun de ses projets. Mon préféré reste indéniablement IGOR, qui a été mon influence principale sur mon premier album, autant sur le plan visuel que musical. Il a d'ailleurs été pour moi une porte d'entrée vers le jazz et plus largement vers la soul. Je me souviens que cet album m'avait été recommandé par ma copine et je n'avais pas du tout accroché à la première écoute, avant de finalement tomber totalement dedans après avoir à peine persévéré !</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Autres influences -->
+        <div class="other-influences-wrap">
+          <span class="other-influences-title" data-i18n="other_influences_title">Autres influences :</span>
+          <div class="other-influences-tags">
+            <span class="other-artist-pill">Air</span>
+            <span class="other-artist-pill">A$AP Rocky</span>
+            <span class="other-artist-pill">Chilly Gonzales</span>
+            <span class="other-artist-pill">Cocteau Twins</span>
+            <span class="other-artist-pill">Deftones</span>
+            <span class="other-artist-pill">Fleetwood Mac</span>
+            <span class="other-artist-pill">Fred again..</span>
+            <span class="other-artist-pill">Hania Rani</span>
+            <span class="other-artist-pill">Holly Herndon</span>
+            <span class="other-artist-pill">JeanJass</span>
+            <span class="other-artist-pill">Justice</span>
+            <span class="other-artist-pill">Kanye West</span>
+            <span class="other-artist-pill">Magdalena Bay</span>
+            <span class="other-artist-pill">Michael Jackson</span>
+            <span class="other-artist-pill">Nina Kraviz</span>
+            <span class="other-artist-pill">Röyksopp</span>
+            <span class="other-artist-pill">Sébastien Tellier</span>
+            <span class="other-artist-pill">Steve Reich</span>
+            <span class="other-artist-pill">Stevie Wonder</span>
+            <span class="other-artist-pill">Tame Impala</span>
+            <span class="other-artist-pill">Théodora</span>
+            <span class="other-artist-pill">Underworld</span>
+            <span class="other-artist-pill">Yves Tumor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SLIDE 03 : PROJETS MUSICAUX (Electric Marguerite & Drama)
+         ---------------------------------------------------- -->
+    <section class="slide-section" id="projets">
+      <div class="slide-inner">
+        <div class="section-label-bar">
+          <span class="section-index">03</span>
+          <h2 class="section-title" data-i18n="title_projets">Projets musicaux</h2>
+        </div>
+
+        <!-- ALBUM 1 : ELECTRIC MARGUERITE -->
+        <article class="album-block">
+          <div class="album-headline">
+            <h3 class="album-name">ELECTRIC MARGUERITE</h3>
+            <span class="album-tag" data-i18n="album1_tag">Premier Projet Album</span>
+          </div>
+
+          <div class="raw-content-block album-intro-block" data-i18n="album1_body">
+            <p>Electric Marguerite est mon premier projet musical. À cette époque, je voulais créer un univers avec un personnage mystérieux qui transportait toujours avec lui une mallette rouge. Cet album m'a énormément formé : j'ai essayé, effacé, recommencé un nombre incalculable de fois pour trouver où je voulais emmener chaque musique, en essayant de faire en sorte qu'elles soient progressives. La plupart du temps, l'inspiration venait naturellement en pratiquant : j'ai découvert que ce n'est pas en cherchant pendant des heures ou en se posant trop de questions qu'on parvient à aboutir à quelque chose qui fonctionne. Il faut faire, commencer, et la vision du projet se construit et se définit au fur et à mesure, le plaisir guidant l'inspiration.</p>
+            <p>J'ai géré absolument toute la partie artistique (composition, imagination du costume, de la cover, des affiches, définition de la direction artistique générale). Côté technique, je remercie encore un ami qui m'a énormément aidé pour le mixage (quand je réécoute aujourd'hui, je trouve que le mixage et certaines prises sont imparfaits, mais il faut bien commencer !). Deux autres amis ont réalisé et monté mes clips vidéo.</p>
+            <p>Je dirais que j'ai assez mal géré la partie communication, et le projet a eu son petit succès dans mon cercle élargi d'amis, mais après avoir mis tant d'efforts dans la création, j'ai sans doute trop pensé que les choses se feraient d'elles-mêmes.</p>
+            <p class="highlight-quote">J'en garde de très bons retours et je retiens surtout le principal : une expérience formidable et la fierté d'avoir été capable d'aller au bout d'un projet complet.</p>
+          </div>
+
+          <div class="album-layout">
+            <!-- Colonne Médias (Cover d'abord, puis Visuels et Vidéo 9:16) -->
+            <div class="album-media-col">
+              <!-- Pochette officielle (Cover avant la vidéo) -->
+              <div class="album-cover-box">
+                <img src="../3_projets_musicaux/ELECTRIC%20MARGERITE/ELECTRIC%20MARGUERITE%20COVER.png" alt="Cover Electric Marguerite" class="zoom-image" data-caption="Pochette officielle — ELECTRIC MARGUERITE">
+                <span class="img-legend">Pochette officielle</span>
+              </div>
+
+              <!-- Visuels secondaires & Stickers -->
+              <div class="album-thumbs-row">
+                <div class="thumb-wrap">
+                  <img src="../3_projets_musicaux/ELECTRIC%20MARGERITE/images%20et%20stickers/AFFICHE_1.png" alt="Affiche 1" class="zoom-image" data-caption="Affiche promotionnelle #1">
+                  <span class="img-legend">Affiche 1</span>
+                </div>
+                <div class="thumb-wrap">
+                  <img src="../3_projets_musicaux/ELECTRIC%20MARGERITE/images%20et%20stickers/affiche_2.jpg" alt="Affiche 2" class="zoom-image" data-caption="Affiche promotionnelle #2">
+                  <span class="img-legend">Affiche 2</span>
+                </div>
+                <div class="thumb-wrap">
+                  <img src="../3_projets_musicaux/ELECTRIC%20MARGERITE/images%20et%20stickers/sticker.png" alt="Sticker" class="zoom-image" data-caption="Sticker Electric Marguerite">
+                  <span class="img-legend">Sticker</span>
+                </div>
+              </div>
+
+              <!-- Vidéo 9:16 boucle sans son -->
+              <div class="video-container-9-16">
+                <video autoplay loop muted playsinline class="video-loop-9-16">
+                  <source src="../3_projets_musicaux/ELECTRIC%20MARGERITE/video/MARGUERITE.mov" type="video/mp4">
+                </video>
+                <span class="video-pill-tag">Loop 9:16</span>
+              </div>
+            </div>
+
+            <!-- Colonne Audio Playlist -->
+            <div class="album-audio-col">
+              <div class="playlist-header">
+                <span class="playlist-title" data-i18n="playlist_title">Extraits sonores</span>
+                <span class="playlist-count">7 titres</span>
+              </div>
+
+              <div class="tracks-list" data-album="Electric Marguerite">
+                <div class="track-item" data-src="../3_projets_musicaux/ELECTRIC%20MARGERITE/extraits%20sonores/marguerite.wav" data-title="Marguerite">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">01. Marguerite</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/ELECTRIC%20MARGERITE/extraits%20sonores/stoic_attitude_1.wav" data-title="Stoic Attitude (Part 1)">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">02. Stoic Attitude 1</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/ELECTRIC%20MARGERITE/extraits%20sonores/stoic_attitude_2.wav" data-title="Stoic Attitude (Part 2)">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">03. Stoic Attitude 2</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/ELECTRIC%20MARGERITE/extraits%20sonores/i_dont_want_to_see_you_anymore.wav" data-title="I Don't Want To See You Anymore">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">04. I Don't Want To See You Anymore</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/ELECTRIC%20MARGERITE/extraits%20sonores/egocatr.wav" data-title="Egocatr">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">05. Egocatr</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/ELECTRIC%20MARGERITE/extraits%20sonores/wont_leave_your_soul.wav" data-title="Won't Leave Your Soul">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">06. Won't Leave Your Soul</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/ELECTRIC%20MARGERITE/extraits%20sonores/intro_1.wav" data-title="Intro (1)">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">07. Intro 1</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ALBUM 2 : DRAMA -->
+        <article class="album-block">
+          <div class="album-headline">
+            <h3 class="album-name">DRAMA</h3>
+            <span class="album-tag" data-i18n="album2_tag">Deuxième Projet Album</span>
+          </div>
+
+          <div class="raw-content-block album-intro-block" data-i18n="album2_body">
+            <p>Drama est mon deuxième projet musical, je voulais quelque chose de beaucoup plus court avec des musiques plus « sombres ».</p>
+            <p>Ce deuxième projet est, je trouve, moins abouti que le premier mais c'est en partie lié au fait que je le voyais plutôt comme un EP. Les musiques sont en général plus simplistes mais elles restent avec une identité qui me correspond.</p>
+            <p>Ce projet m'a appris que c'est loin d'être plus facile de faire une musique qui « fonctionne » à la première écoute. La musique instrumentale a besoin d'être constamment en mouvement sans que cela se remarque parfois, que ce soit par le mix, en modulant les effets ou de par les mélodies : même une musique répétitive doit être pleine de mouvement.</p>
+            <p class="highlight-quote">C'est ce que j'ai essayé d'appliquer sur ce projet dont je suis également très fier !</p>
+          </div>
+
+          <div class="album-layout">
+            <!-- Colonne Médias (Cover d'abord, puis Visuels et Vidéo 9:16) -->
+            <div class="album-media-col">
+              <!-- Pochette officielle DRAMA (Cover avant la vidéo) -->
+              <div class="album-cover-box">
+                <img src="../3_projets_musicaux/DRAMA/drama%20cover.png" alt="Cover DRAMA" class="zoom-image" data-caption="Pochette officielle — DRAMA">
+                <span class="img-legend">Pochette officielle</span>
+              </div>
+
+              <!-- Vidéo 9:16 boucle sans son -->
+              <div class="video-container-9-16">
+                <video autoplay loop muted playsinline class="video-loop-9-16">
+                  <source src="../3_projets_musicaux/DRAMA/video/canva_drama_v4.mp4" type="video/mp4">
+                </video>
+                <span class="video-pill-tag">Loop 9:16</span>
+              </div>
+            </div>
+
+            <!-- Colonne Audio Playlist DRAMA -->
+            <div class="album-audio-col">
+              <div class="playlist-header">
+                <span class="playlist-title" data-i18n="playlist_title">Extraits sonores</span>
+                <span class="playlist-count">7 titres</span>
+              </div>
+
+              <div class="tracks-list" data-album="DRAMA">
+                <div class="track-item" data-src="../3_projets_musicaux/DRAMA/extrait_audio/the_machinery.wav" data-title="The Machinery">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">01. The Machinery</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/DRAMA/extrait_audio/digital_voix.wav" data-title="Digital Voix">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">02. Digital Voix</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/DRAMA/extrait_audio/nightclub_drama_1.wav" data-title="Nightclub Drama 1">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">03. Nightclub Drama 1</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/DRAMA/extrait_audio/nightclub_drama_2.wav" data-title="Nightclub Drama 2">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">04. Nightclub Drama 2</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/DRAMA/extrait_audio/madness_theory_1.wav" data-title="Madness Theory 1">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">05. Madness Theory 1</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/DRAMA/extrait_audio/madness_theory_2.wav" data-title="Madness Theory 2">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">06. Madness Theory 2</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="track-item" data-src="../3_projets_musicaux/DRAMA/extrait_audio/new_fantasy.wav" data-title="New Fantasy">
+                  <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                  <div class="track-meta">
+                    <span class="track-title">07. New Fantasy</span>
+                  </div>
+                  <div class="track-bars"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SLIDE 04 : LUTHERIE ET CRÉATIONS (Basse & Bureau)
+         ---------------------------------------------------- -->
+    <section class="slide-section" id="lutherie">
+      <div class="slide-inner">
+        <div class="section-label-bar">
+          <span class="section-index">04</span>
+          <h2 class="section-title" data-i18n="title_lutherie">Lutherie et créations</h2>
+        </div>
+
+        <!-- 1. BASSE JAZZ BASS FAITE MAIN -->
+        <article class="creation-block">
+          <div class="creation-header">
+            <h3 class="creation-title" data-i18n="bass_title">Fabrication de ma Jazz Bass (2021)</h3>
+          </div>
+
+          <div class="creation-content">
+            <div class="raw-content-block" data-i18n="bass_body">
+              <p>En 2021, j'ai entrepris la fabrication de mon propre modèle de Jazz Bass. J'ai donc récupéré les plans sur Internet, fait imprimer en taille réelle et me voilà lancé dans un projet qui m'aura pris 6 mois.</p>
+              <p>J'ai décidé d'acheter le manche et de ne réaliser « que » le corps car cela reste un instrument avec lequel j'avais l'intention de jouer, et la fabrication d'un manche requiert des compétences plus poussées en lutherie ainsi que des outils spécifiques.</p>
+              <p>Ma partie préférée a été le creusage des formes d'amincissement dans le corps directement à la lime, car ce fut long mais c'était la dernière étape avant d'obtenir la forme définitive du corps.</p>
+              <p class="highlight-quote">Ma basse est aujourd'hui complètement fonctionnelle et m'a d'ailleurs servi sur beaucoup de mes morceaux !!!</p>
+            </div>
+
+            <!-- Lecteur audio extrait basse -->
+            <div class="single-audio-card">
+              <div class="track-item" data-src="../4_lutherie_et_creations/basse/extrait_comment_sonne_la_basse.wav" data-title="Comment sonne la basse">
+                <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                <div class="track-meta">
+                  <span class="track-title">extrait_comment_sonne_la_basse.wav</span>
+                  <span class="track-sub" data-i18n="bass_audio_sub">Enregistrement direct avec la basse fabriquée</span>
+                </div>
+                <div class="track-bars"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+
+            <!-- Galerie photos avec zoom au survol et légendes -->
+            <div class="media-gallery-wrap">
+              <span class="gallery-title" data-i18n="gallery_bass_title">Étapes de fabrication & résultat final</span>
+              <div class="gallery-grid">
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/basse/1.JPG" alt="Basse étape 1" class="zoom-image" data-caption="Découpe brute du corps">
+                  <span class="img-legend">Découpe brute</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/basse/2.jpeg" alt="Basse étape 2" class="zoom-image" data-caption="Usinage des cavités micros">
+                  <span class="img-legend">Cavités micros</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/basse/4.jpeg" alt="Basse étape 4" class="zoom-image" data-caption="Ponçage du corps">
+                  <span class="img-legend">Ponçage</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/basse/6.jpeg" alt="Basse étape 6" class="zoom-image" data-caption="Montage de l'électronique">
+                  <span class="img-legend">Électronique</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/basse/11.JPG" alt="Basse étape 11" class="zoom-image" data-caption="Basse assemblée">
+                  <span class="img-legend">Instrument monté</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/basse/13.jpeg" alt="Basse étape 13" class="zoom-image" data-caption="Basse finalisée et cordée">
+                  <span class="img-legend">Prête à jouer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. BUREAU DE HOME STUDIO -->
+        <article class="creation-block">
+          <div class="creation-header">
+            <h3 class="creation-title" data-i18n="desk_title">Bureau de home studio sur mesure (Fin 2025)</h3>
+          </div>
+
+          <div class="creation-content">
+            <div class="raw-content-block" data-i18n="desk_body">
+              <p>Fin 2025, je me suis lancé dans la fabrication d'un bureau pour mon home studio. Étant donné l'espace assez réduit que je possède, il a fallu que je trouve le moyen de placer mes deux synthés dessus.</p>
+              <p>Il possède un grand tiroir qui s'ouvre complètement ainsi que deux colonnes de rangement « cachées » dans les pieds du bureau, cela permet d'avoir de l'espace pour les câbles ou autres accessoires tout en gardant un aspect important : le design !</p>
+              <p class="highlight-quote">Ce projet m'a pris 6 mois entre la conception, la fabrication et le montage. J'ai pu faire sous-traiter la soudure et la découpe du bois à quelques amis qui ont le matériel.</p>
+            </div>
+
+            <!-- Galerie Plans CATIA, Rendus et Photos réelles avec Zoom et Légendes -->
+            <div class="media-gallery-wrap">
+              <span class="gallery-title" data-i18n="gallery_desk_title">Conception CATIA, Rendus 3D & Bureau fini</span>
+              <div class="gallery-grid">
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/bureau%20de%20home%20studio/photo%20rendu%20catia/rendu_catia_avec_mannquin.png" alt="Rendu CATIA avec mannequin" class="zoom-image" data-caption="Modélisation ergonomique CATIA avec mannequin">
+                  <span class="img-legend">CATIA avec mannequin</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/bureau%20de%20home%20studio/photos%20rendu%20realiste/rendu1.jpg" alt="Rendu réaliste 1" class="zoom-image" data-caption="Rendu photoréaliste studio">
+                  <span class="img-legend">Rendu 3D réaliste</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/bureau%20de%20home%20studio/photos%20rendu%20realiste/rendu2.png" alt="Rendu réaliste 2" class="zoom-image" data-caption="Rendu photoréaliste tiroir">
+                  <span class="img-legend">Rendu tiroir</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/bureau%20de%20home%20studio/photos%20finales/bureau%20en%20construction.jpg" alt="Construction" class="zoom-image" data-caption="Bureau en cours de fabrication">
+                  <span class="img-legend">En construction</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/bureau%20de%20home%20studio/photos%20finales/bureau%20tiroir%20ouvert.jpeg" alt="Tiroir ouvert" class="zoom-image" data-caption="Grand tiroir coulissant ouvert">
+                  <span class="img-legend">Tiroir ouvert</span>
+                </div>
+                <div class="gallery-card">
+                  <img src="../4_lutherie_et_creations/bureau%20de%20home%20studio/photos%20finales/home%20studio%20final.jpeg" alt="Home studio final" class="zoom-image" data-caption="Bureau installé dans le home studio">
+                  <span class="img-legend">Home studio final</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SLIDE 05 : PROJETS EN COURS (Machina & Elektromania)
+         ---------------------------------------------------- -->
+    <section class="slide-section" id="en-cours">
+      <div class="slide-inner">
+        <div class="section-label-bar">
+          <span class="section-index">05</span>
+          <h2 class="section-title" data-i18n="title_encours">Projets en cours</h2>
+        </div>
+
+        <!-- 1. MACHINA -->
+        <article class="creation-block">
+          <div class="creation-header">
+            <h3 class="creation-title">MACHINA</h3>
+            <span class="creation-tag" data-i18n="machina_tag">Logiciel audio expérimental</span>
+          </div>
+
+          <div class="creation-content">
+            <div class="raw-content-block" data-i18n="machina_body">
+              <p>Machina est un logiciel que j'ai imaginé en m'inspirant du travail de Richard D. James et Dave Griffiths sur leur logiciel Samplebrain. Il fonctionne sur la base d'une banque de samples que l'on vient découper en milliers de fragments audio à l'aide d'un modèle mathématique appelé « wavelet transform » ; on vient ensuite charger un sample « cible » et l'algorithme va en temps réel analyser le sample cible et jouer le fragment de sample contenu dans la banque de son qui y ressemble le plus (aussi basé sur une analyse fréquentielle). On peut jouer sur différents paramètres pour influencer le choix de l'algorithme sur le fragment audio joué en temps réel. Cela donne lieu à des textures assez étranges et chaotiques. Le programme a une vocation assez expérimentale. J'ai également ajouté une partie séquenceur avec des drone voices pour que l'instrument permette de jouer des musiques assez complètes à lui seul. J'ai utilisé l'IA pour sécuriser et accélérer la partie codage mais la partie modèle mathématique, interface, fonctionnement, etc., vient de moi et de mes inspirations !</p>
+            </div>
+
+            <!-- Extrait sonore Machina (extrait mis à jour) -->
+            <div class="single-audio-card">
+              <div class="track-item" data-src="../5_projets_en_cours/machina/extrait_audio_machina.wav" data-title="Extrait Audio Machina">
+                <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                <div class="track-meta">
+                  <span class="track-title">extrait_audio_machina.wav</span>
+                  <span class="track-sub" data-i18n="machina_audio_sub">Démonstration sonore générée par Machina</span>
+                </div>
+                <div class="track-bars"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+
+            <!-- Visuels Machina avec zoom et légendes -->
+            <div class="machina-visuals-grid">
+              <div class="machina-card">
+                <img src="../5_projets_en_cours/machina/interface_visuelle_machina.png" alt="Interface Machina" class="zoom-image" data-caption="Interface logicielle de Machina">
+                <span class="img-legend">Interface logicielle Machina</span>
+              </div>
+              <div class="machina-card">
+                <img src="../5_projets_en_cours/machina/prototype_interface_visuelle_dessinee_sur_ipad.jpg" alt="Prototype iPad" class="zoom-image" data-caption="Prototype d'interface dessiné sur iPad">
+                <span class="img-legend">Prototype esquissé sur iPad</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. ELEKTROMANIA -->
+        <article class="creation-block">
+          <div class="creation-header">
+            <h3 class="creation-title">ELEKTROMANIA</h3>
+            <span class="creation-tag" data-i18n="elektro_tag">Nouveau projet musical</span>
+          </div>
+
+          <div class="creation-content">
+            <div class="raw-content-block" data-i18n="elektro_body">
+              <p>Je me suis lancé dans la création d'un nouveau projet musical, mon objectif est qu'il soit plus abouti que mes deux précédents, avec une direction beaucoup plus électronique et une forte présence de piano mélangé à des sonorités de synthétiseurs plus aériens, ambient. Il s'appellera Elektromania, à ce stade je suis encore en phase de réflexion sur la direction artistique et j'enregistre plusieurs maquettes pour trouver la direction vers laquelle je souhaite m'orienter.</p>
+              <p>J'enregistre quasiment tous mes sons à l'aide de mon ASM Hydrasynth et j'utilise mon Moog Grandmother pour les basses. Je compte également le composer pour qu'il soit facile d'improviser sur les musiques et faire un album facilement adaptable au live. C'est encore loin d'être concret pour moi mais c'est un domaine dans lequel je souhaite m'entraîner.</p>
+              <p class="highlight-quote">Sur ce projet j'aimerais augmenter le niveau de cohérence entre chaque morceau, la qualité du mixage ainsi que la partie communication dont j'ai compris qu'elle était cruciale.</p>
+              <p>Voici quelques extraits de maquettes en avant-première ainsi que des aperçus visuels de la direction artistique.</p>
+            </div>
+
+            <!-- Extraits Audio & Inspirations Visuelles Elektromania -->
+            <div class="elektro-media-wrap">
+              <!-- Extraits audio -->
+              <div class="elektro-audio-col">
+                <span class="gallery-title" data-i18n="elektro_audio_title">Extraits de maquettes en avant-première</span>
+                <div class="tracks-list elektro-tracks-list" data-album="Elektromania">
+                  <div class="track-item" data-src="../5_projets_en_cours/ELEKTROMANIA/extraits_audio/extract1.wav" data-title="Elektromania - Maquette 01">
+                    <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                    <div class="track-meta">
+                      <span class="track-title">01. Maquette 01</span>
+                    </div>
+                    <div class="track-bars"><span></span><span></span><span></span></div>
+                  </div>
+
+                  <div class="track-item" data-src="../5_projets_en_cours/ELEKTROMANIA/extraits_audio/extract2.wav" data-title="Elektromania - Maquette 02">
+                    <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                    <div class="track-meta">
+                      <span class="track-title">02. Maquette 02</span>
+                    </div>
+                    <div class="track-bars"><span></span><span></span><span></span></div>
+                  </div>
+
+                  <div class="track-item" data-src="../5_projets_en_cours/ELEKTROMANIA/extraits_audio/extract3.wav" data-title="Elektromania - Maquette 03">
+                    <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                    <div class="track-meta">
+                      <span class="track-title">03. Maquette 03</span>
+                    </div>
+                    <div class="track-bars"><span></span><span></span><span></span></div>
+                  </div>
+
+                  <div class="track-item" data-src="../5_projets_en_cours/ELEKTROMANIA/extraits_audio/extract4.wav" data-title="Elektromania - Maquette 04">
+                    <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                    <div class="track-meta">
+                      <span class="track-title">04. Maquette 04</span>
+                    </div>
+                    <div class="track-bars"><span></span><span></span><span></span></div>
+                  </div>
+
+                  <div class="track-item" data-src="../5_projets_en_cours/ELEKTROMANIA/extraits_audio/extract5.wav" data-title="Elektromania - Maquette 05">
+                    <button class="track-btn"><span class="btn-symbol">▶</span></button>
+                    <div class="track-meta">
+                      <span class="track-title">05. Maquette 05</span>
+                    </div>
+                    <div class="track-bars"><span></span><span></span><span></span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Inspirations visuelles -->
+              <div class="elektro-visuals-col">
+                <span class="gallery-title" data-i18n="elektro_visuals_title">Inspirations visuelles & moodboard</span>
+                <div class="gallery-grid elektro-visuals-grid">
+                  <div class="gallery-card">
+                    <img src="../5_projets_en_cours/ELEKTROMANIA/inspirations%20visuelles/1.png" alt="Inspiration Visuelle 1" class="zoom-image" data-caption="Inspiration visuelle #1 — Ambiances & Textures">
+                    <span class="img-legend">Inspiration 01</span>
+                  </div>
+                  <div class="gallery-card">
+                    <img src="../5_projets_en_cours/ELEKTROMANIA/inspirations%20visuelles/2.png" alt="Inspiration Visuelle 2" class="zoom-image" data-caption="Inspiration visuelle #2 — Synthèses et matières">
+                    <span class="img-legend">Inspiration 02</span>
+                  </div>
+                  <div class="gallery-card">
+                    <img src="../5_projets_en_cours/ELEKTROMANIA/inspirations%20visuelles/3.png" alt="Inspiration Visuelle 3" class="zoom-image" data-caption="Inspiration visuelle #3 — Esthétique graphique">
+                    <span class="img-legend">Inspiration 03</span>
+                  </div>
+                  <div class="gallery-card">
+                    <img src="../5_projets_en_cours/ELEKTROMANIA/inspirations%20visuelles/test1.png" alt="Inspiration Visuelle 4" class="zoom-image" data-caption="Inspiration visuelle #4 — Recherche conceptuelle">
+                    <span class="img-legend">Inspiration 04</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SLIDE 06 : MES PERSPECTIVES D'AMÉLIORATION
+         ---------------------------------------------------- -->
+    <section class="slide-section" id="perspectives">
+      <div class="slide-inner">
+        <div class="section-label-bar">
+          <span class="section-index">06</span>
+          <h2 class="section-title" data-i18n="title_perspectives">Mes perspectives d'améliorations</h2>
+        </div>
+
+        <div class="perspectives-editorial-block">
+          <div class="raw-content-block" data-i18n="perspectives_body">
+            <p>Durant ces prochaines années, j'aimerais améliorer mon jeu au clavier.</p>
+            
+            <div class="persp-item-box">
+              <span class="bullet-arrow">&bull;</span>
+              <p><strong>Améliorer mon niveau en mix :</strong> j'ai souvent appris par moi-même à travers des vidéos sur Internet où l'on entend beaucoup de conseils différents ; je n'ai jamais vraiment eu de recul sur mon travail concernant le mixage, j'aimerais développer cette compétence entouré par des gens compétents capables d'analyser mes points faibles et m'aider à les effacer.</p>
+            </div>
+
+            <div class="persp-item-box">
+              <span class="bullet-arrow">&bull;</span>
+              <p>Comme beaucoup de musiciens qui composent, j'ai souvent laissé des projets à l'abandon sans jamais les terminer, c'est une chose que je suis en train d'améliorer mais qui est malheureusement toujours présente. J'ai acheté le livre « Comment finir ses morceaux » d'Adrien Perinot de la chaîne Projet Home Studio pour m'aider dans cette démarche.</p>
+            </div>
+
+            <div class="persp-item-box">
+              <span class="bullet-arrow">&bull;</span>
+              <p><strong>Pour mes projets musicaux personnels, je n'ai pas du tout assez développé la communication</strong> autour de mon travail, c'est un pan essentiel dans le développement d'un artiste. C'est loin d'être ma partie préférée mais elle est obligatoire, j'aimerais augmenter ma présence notamment sur les réseaux sociaux pour partager mon travail mais également garder une trace de mon évolution ! Je souhaite m'entourer d'une personne qui aura une vision à laquelle je peux m'identifier et qui pourra m'aider.</p>
+            </div>
+
+            <div class="persp-item-box">
+              <span class="bullet-arrow">&bull;</span>
+              <p><strong>Je n'ai jamais fait de live</strong> (excepté 2-3 concerts étant petit à l'école de musique mais je considère qu'on ne le comptera pas), c'est quelque chose qui est dans ma tête depuis un certain temps, j'ai d'ailleurs récemment acheté mon premier contrôleur MIDI pour essayer de développer mon aisance à jouer et faire évoluer des morceaux en live.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SLIDE 07 : CONTACT
+         ---------------------------------------------------- -->
+    <section class="slide-section" id="contact">
+      <div class="slide-inner">
+        <div class="section-label-bar">
+          <span class="section-index">07</span>
+          <h2 class="section-title" data-i18n="title_contact">Contact</h2>
+        </div>
+
+        <div class="contact-editorial-card">
+          <div class="contact-card-header">
+            <h3 class="contact-heading" data-i18n="contact_heading">Matéo Bouzidi <span class="aka-light">(Siir Marcel)</span></h3>
+          </div>
+
+          <div class="contact-info-list">
+            <a href="mailto:mateo.bouzidi@gmail.com" class="contact-link-row">
+              <span class="contact-type">Email</span>
+              <span class="contact-value">mateo.bouzidi@gmail.com</span>
+            </a>
+            <a href="tel:0650014257" class="contact-link-row">
+              <span class="contact-type">Téléphone</span>
+              <span class="contact-value">06 50 01 42 57</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       STICKY BOTTOM AUDIO PLAYER BAR (Ableton style)
+       ======================================================== -->
+  <footer class="master-player-bar" id="master-player-bar">
+    <div class="player-inner">
+      <div class="player-info-col">
+        <div class="now-playing-title" id="now-playing-title">Aucun extrait en lecture</div>
+        <div class="now-playing-album" id="now-playing-album">Cliquez sur un morceau pour écouter</div>
+      </div>
+
+      <div class="player-controls-col">
+        <button class="transport-btn" id="btn-audio-prev" title="Précédent" aria-label="Précédent">⏮</button>
+        <button class="transport-btn main-play" id="btn-audio-play" title="Lecture/Pause" aria-label="Lecture/Pause">▶</button>
+        <button class="transport-btn" id="btn-audio-next" title="Suivant" aria-label="Suivant">⏭</button>
+
+        <div class="scrubber-wrap">
+          <span class="time-digit" id="time-current">00:00</span>
+          <div class="progress-bar-track" id="seek-bar-track">
+            <div class="progress-bar-fill" id="seek-bar-fill"></div>
+          </div>
+          <span class="time-digit" id="time-total">00:00</span>
+        </div>
+      </div>
+
+      <div class="player-vol-col">
+        <span class="vol-icon">VOL</span>
+        <input type="range" min="0" max="1" step="0.05" value="0.85" id="master-vol-slider" class="vol-slider" title="Volume">
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       CENTERED HOVER ZOOM VIEWER (Agrandissement centré sans aucun crop)
+       ======================================================== -->
+  <div class="hover-zoom-viewer" id="hover-zoom-viewer" aria-hidden="true">
+    <div class="hover-zoom-box">
+      <img id="hover-zoom-img" src="" alt="Aperçu grand format">
+      <p id="hover-zoom-caption" class="hover-zoom-caption"></p>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       IMAGE LIGHTBOX (Minimalist, clean view)
+       ======================================================== -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close-btn" aria-label="Fermer">&times;</button>
+      <img src="" alt="" id="lightbox-img" class="lightbox-img">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="native-audio-player" preload="none"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

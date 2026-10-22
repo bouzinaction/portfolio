@@ -1,0 +1,1390 @@
+/* ==========================================================================
+   PORTFOLIO MATÉO (SIR MARCEL) — STYLESHEET (style.css)
+   Aesthetic: Codes Couleurs Exacts du Site Officiel Ableton Live (ableton.com)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   01. Variables & Design Tokens (Palette Officielle du Site Ableton Live)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Fond de page général officiel Ableton - Gris studio plus foncé pour contraster avec le blanc */
+  --bg-main: #d8d8d8;           /* Ableton --c2-bg: rgb(216, 216, 216) */
+  --bg-card: #ffffff;           /* Ableton --c1-bg: rgb(255, 255, 255) */
+  --bg-dark: #000000;           /* Ableton --c10-bg: rgb(0, 0, 0) */
+  
+  --text-main: #000000;         /* Noir absolu typographique Ableton */
+  --text-muted: #444444;        /* Gris neutre Ableton */
+  --text-light: #777777;
+
+  --border-color: #000000;      /* Ligne noire de structure nette Ableton */
+  --border-subtle: #b8b8b8;
+
+  /* Palette Exacte des 7 Sections extraite du site officiel Ableton Live (ableton.com) */
+  --color-sec1: #dbd2f0;        /* Point 1 (Moi) : Violet Ableton --c28-bg: rgb(219, 210, 240) */
+  --color-sec1-accent: #cdbefd; /* Ableton --c9-bg: rgb(205, 190, 253) */
+
+  --color-sec2: #fadee8;        /* Point 2 (Influences) : Rose Ableton --c26-bg: rgb(250, 222, 232) */
+  --color-sec2-accent: #ffc2ca; /* Ableton --c17-bg: rgb(255, 194, 202) */
+
+  --color-sec3: #ffffff;        /* Point 3 (Projets) : Blanc Ableton --c1-bg: rgb(255, 255, 255) */
+  --color-sec3-accent: #000000;
+
+  --color-sec4: #ebf0dc;        /* Point 4 (Lutherie) : Jaune sable Ableton --c8-bg: rgb(235, 240, 220) */
+  --color-sec4-accent: #ced6b6;
+
+  --color-sec5: #8efbd8;        /* Point 5 (En cours) : Vert turquoise Ableton --c24-bg: rgb(142, 251, 216) */
+  --color-sec5-accent: #7dffff; /* Ableton --c23-bg: rgb(125, 255, 255) */
+
+  --color-sec6: #b1c5ff;        /* Point 6 (Perspectives) : Bleu lavande Ableton --c7-bg: rgb(177, 197, 255) */
+  --color-sec6-accent: #9cb4fd;
+
+  --color-sec7: #fbffa7;        /* Point 7 (Contact) : 2ème Jaune Ableton --c14-bg: rgb(251, 255, 167) */
+  --color-sec7-accent: #ebf073;
+
+  /* Accents et Couleurs Spécifiques du site Ableton */
+  --accent-yellow: #fdf900;      /* Jaune signature Ableton --c20-bg */
+  --accent-lime: #00ffaf;        /* Vert vumètre Ableton --c16-bg */
+  --ableton-coral: #dd4312;      /* Orange signature navigation Ableton */
+
+  /* Typographies */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  /* Dimensions */
+  --header-height: 72px;
+  --player-height: 64px;
+}
+
+/* Yellow fluorescent selection */
+::selection {
+  background: var(--accent-yellow) !important;
+  color: #000000 !important;
+}
+
+/* --------------------------------------------------------------------------
+   02. Global Reset & Smooth Scroll
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+  background-color: var(--bg-main);
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: var(--header-height);
+  padding-bottom: calc(var(--player-height) + 40px);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   03. Sticky Header (Minimalist & Ableton-style)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(216, 216, 216, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--border-color);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.koru-logo {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-name {
+  font-size: 1.15rem;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.brand-alias {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Nav links */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 6px 4px;
+  position: relative;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.nav-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-light);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-main);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--border-color);
+}
+
+/* Language switch button */
+.lang-switch-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 5px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.lang-switch-btn:hover {
+  background: var(--border-color);
+  color: #fff;
+}
+
+.lang-switch-btn:hover .lang-opt {
+  color: #fff;
+}
+
+.lang-opt {
+  color: var(--text-muted);
+  transition: color 0.15s ease;
+}
+
+.lang-opt.active {
+  color: var(--text-main);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lang-divider {
+  color: var(--border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   04. Presentation Container & Section Architecture (Ableton Live 10 Pastel)
+   -------------------------------------------------------------------------- */
+.slides-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 36px 24px;
+}
+
+/* Blocs de section carrés, sans contours noirs, avec fond pastel pur */
+.slide-section {
+  min-height: 75vh;
+  padding: 60px 48px;
+  margin-bottom: 40px;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: calc(var(--header-height) + 16px);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-section:last-of-type {
+  margin-bottom: 20px;
+}
+
+.slide-inner {
+  width: 100%;
+}
+
+/* Identité Couleur par Section (Codes Couleurs Exacts Ableton Live) */
+#moi {
+  background-color: var(--color-sec1);
+}
+#moi .section-index {
+  background: var(--color-sec1-accent);
+  color: #000;
+}
+
+#influences {
+  background-color: var(--color-sec2);
+}
+#influences .section-index {
+  background: var(--color-sec2-accent);
+  color: #000;
+}
+
+/* Sections Multi-Points Séparées en 2 Sous-Blocs Distincts de Même Couleur */
+#projets {
+  background-color: transparent !important;
+  padding: 0 !important;
+  min-height: auto;
+}
+#projets .section-index {
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  color: #000;
+}
+#projets .album-block {
+  background-color: var(--color-sec3); /* Blanc Ableton --c1-bg */
+  padding: 56px 48px;
+  margin-bottom: 24px;
+  border: none;
+  box-shadow: none;
+}
+#projets .album-block:last-of-type {
+  margin-bottom: 0;
+}
+
+#lutherie {
+  background-color: transparent !important;
+  padding: 0 !important;
+  min-height: auto;
+}
+#lutherie .section-index {
+  background: var(--color-sec4);
+  border: 1.5px solid var(--border-color);
+  color: #000;
+}
+#lutherie .creation-block {
+  background-color: var(--color-sec4); /* Jaune comme ex-point 7 Ableton --c8-bg */
+  padding: 56px 48px;
+  margin-bottom: 24px;
+  border: none;
+  box-shadow: none;
+}
+#lutherie .creation-block:last-of-type {
+  margin-bottom: 0;
+}
+
+#en-cours {
+  background-color: transparent !important;
+  padding: 0 !important;
+  min-height: auto;
+}
+#en-cours .section-index {
+  background: var(--color-sec5);
+  border: 1.5px solid var(--border-color);
+  color: #000;
+}
+#en-cours .creation-block {
+  background-color: var(--color-sec5); /* Vert comme ex-point 3 Ableton --c24-bg */
+  padding: 56px 48px;
+  margin-bottom: 24px;
+  border: none;
+  box-shadow: none;
+}
+#en-cours .creation-block:last-of-type {
+  margin-bottom: 0;
+}
+
+#perspectives {
+  background-color: var(--color-sec6); /* Bleu lavande Ableton --c7-bg */
+}
+#perspectives .section-index {
+  background: var(--color-sec6-accent);
+  color: #000;
+}
+
+#contact {
+  background-color: var(--color-sec7); /* 2ème Jaune Ableton --c14-bg */
+}
+#contact .section-index {
+  background: #000000;
+  color: var(--color-sec7);
+}
+
+/* Barre de Titre de Section */
+.section-label-bar {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.section-index {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border: none;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.section-intro-text {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin-bottom: 32px;
+  color: var(--text-main);
+}
+
+/* Bloc Textes Bruts (Écrits directement sur le fond de couleur, pas de bloc blanc) */
+.raw-content-block p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  color: var(--text-main);
+  text-align: justify;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.highlight-quote {
+  font-size: 1.15rem !important;
+  font-weight: 600;
+  background: transparent !important;
+  padding: 16px 22px !important;
+  border-left: 5px solid var(--border-color) !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-right: none !important;
+  margin: 26px 0 !important;
+  box-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   05. Slide 01 : Moi (Texte écrit direct sur le rose, sans bloc blanc)
+   -------------------------------------------------------------------------- */
+.slide-grid-moi {
+  display: block;
+  max-width: 960px;
+}
+
+.hero-name {
+  font-size: 3.4rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+#moi .raw-content-block p {
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin-bottom: 18px;
+}
+
+#moi .highlight-quote {
+  border-left-color: var(--border-color) !important;
+  background: transparent !important;
+}
+
+/* --------------------------------------------------------------------------
+   06. Slide 02 : Influences Musicales (Agrandissement, Flip & Centrage)
+   -------------------------------------------------------------------------- */
+.influences-flip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 20px 0;
+}
+
+/* 3D Flip Card Container */
+.flip-card-wrapper {
+  flex: 0 0 220px;
+  width: 220px;
+  height: 220px;
+  perspective: 1400px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  transform-origin: center center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), z-index 0s;
+  z-index: 10;
+}
+
+/* S'agrandit, se retourne et se place en avant-plan centré au survol */
+.flip-card-wrapper:hover,
+.flip-card-wrapper:focus-within {
+  transform: scale(1.42);
+  z-index: 500;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-wrapper:hover .flip-card-inner,
+.flip-card-wrapper:focus .flip-card-inner,
+.flip-card-wrapper.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Front & Back Faces */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 2px solid var(--border-color);
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: #000;
+}
+
+.artist-square-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.artist-front-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 65%, transparent 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.artist-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ffee00;
+  display: block;
+}
+
+.artist-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.flip-hint {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+/* Card Back (Fond pastel rose, pas de bloc blanc) */
+.flip-card-back {
+  background-color: var(--color-sec2);
+  color: var(--text-main);
+  transform: rotateY(180deg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-header {
+  border-bottom: 2px solid var(--border-color);
+  padding: 8px 12px;
+  margin: -16px -16px 10px -16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligné à gauche */
+}
+
+.back-artist-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left; /* Centré à gauche */
+  letter-spacing: -0.3px;
+}
+
+/* Couleurs Exactes du Site Ableton Live pour le dos des cartes */
+.back-header.back-daft {
+  background: #fbffa7; /* Ableton --c14-bg: rgb(251, 255, 167) */
+  color: #000;
+}
+
+.back-header.back-aphex {
+  background: #b6ffc0; /* Ableton --c15-bg: rgb(182, 255, 192) */
+  color: #000;
+}
+
+.back-header.back-pink {
+  background: #7dffff; /* Ableton --c23-bg: rgb(125, 255, 255) */
+  color: #000;
+}
+
+.back-header.back-radiohead {
+  background: #febf88; /* Ableton --c21-bg: rgb(254, 191, 136) */
+  color: #000;
+}
+
+.back-header.back-tyler {
+  background: #d5b3ff; /* Ableton --c18-bg: rgb(213, 179, 255) */
+  color: #000;
+}
+
+.back-text-scroll {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 4px;
+  scrollbar-width: thin;
+}
+
+.back-text-scroll p {
+  font-size: 0.82rem;
+  line-height: 1.52;
+  color: var(--text-main);
+  text-align: justify;
+}
+
+/* --------------------------------------------------------------------------
+   07. Slide 03 : Projets Musicaux (2 Blocs Blancs Distincts)
+   -------------------------------------------------------------------------- */
+.album-block {
+  border: none;
+  box-shadow: none;
+}
+
+.album-headline {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.album-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.album-tag {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: #000000;
+  color: #ffffff;
+  border: 1.5px solid var(--border-color);
+  padding: 3px 10px;
+  font-weight: 700;
+}
+
+.album-block:nth-of-type(1) .album-headline {
+  border-bottom: 2px solid var(--border-color);
+}
+
+.album-block:nth-of-type(2) .album-headline {
+  border-bottom: 2px solid var(--border-color);
+}
+
+.album-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 36px;
+}
+
+/* Colonne Médias (Cover d'abord, puis Thumbs, puis Vidéo 9:16) */
+.album-media-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.album-cover-box {
+  width: 100%;
+  position: relative;
+}
+
+.album-thumbs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  position: relative;
+}
+
+.album-block:nth-of-type(2) .album-thumbs-row {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.thumb-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+/* 9:16 Cropped Loop Video (après la pochette et les visuels) */
+.video-container-9-16 {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: #000;
+  border: 2px solid var(--border-color);
+  margin: 10px auto 0 auto;
+}
+
+.video-loop-9-16 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-pill-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border: 1px solid #ffffff;
+}
+
+/* Vignette dans la grille */
+.zoom-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border: 1.5px solid var(--border-color);
+  cursor: zoom-in;
+  position: relative;
+  transition: opacity 0.2s ease, outline 0.15s ease;
+}
+
+.zoom-image:hover {
+  outline: 3px solid #000000;
+  opacity: 0.92;
+}
+
+/* ==========================================================================
+   Aperçu Centré Plein Format au Survol (Sans AUCUN crop, image 100% visible)
+   ========================================================================== */
+.hover-zoom-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hover-zoom-viewer.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-zoom-box {
+  max-width: 88vw;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 2px solid #000000;
+  padding: 10px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+.hover-zoom-box img {
+  max-width: 84vw;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  object-fit: contain !important; /* Aucun recadrage, respect absolu des proportions */
+  display: block;
+}
+
+.hover-zoom-caption {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #000000;
+  background: #ffee00;
+  padding: 4px 10px;
+  margin-top: 8px;
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+.img-legend {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  display: block;
+}
+
+/* Audio Playlist Column */
+.album-audio-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+.playlist-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.playlist-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: var(--bg-main);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.track-item:hover {
+  border-color: var(--border-color);
+  background: #fff;
+  transform: translateX(4px);
+}
+
+.track-item.playing {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.track-btn {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.track-item.playing .track-btn {
+  background: var(--accent-lime);
+  border-color: var(--accent-lime);
+  color: #000;
+}
+
+.track-meta {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.track-sub {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.track-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 14px;
+}
+
+.track-item.playing .track-bars span {
+  display: block;
+  width: 3px;
+  background: var(--accent-lime);
+  animation: barBounce 0.7s ease-in-out infinite alternate;
+}
+
+.track-item.playing .track-bars span:nth-child(2) { animation-delay: 0.2s; }
+.track-item.playing .track-bars span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes barBounce {
+  0% { height: 3px; }
+  100% { height: 14px; }
+}
+
+/* --------------------------------------------------------------------------
+   08. Slide 04 & 05 : Lutherie, Créations, Projets en Cours
+   -------------------------------------------------------------------------- */
+.creation-block {
+  border: none;
+  box-shadow: none;
+}
+
+.creation-header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.creation-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.creation-tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.single-audio-card {
+  margin: 20px 0;
+}
+
+/* Galerie photos en grille complète (Sans défilement ni curseur horizontal) */
+.media-gallery-wrap {
+  margin-top: 24px;
+  position: relative;
+}
+
+.gallery-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  padding: 12px 0 10px 0;
+}
+
+.gallery-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.gallery-card .zoom-image {
+  aspect-ratio: 4 / 3;
+}
+
+/* Grille Visuels Machina */
+.machina-visuals-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  position: relative;
+}
+
+.machina-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.machina-card .zoom-image {
+  aspect-ratio: 16 / 10;
+}
+
+/* --------------------------------------------------------------------------
+   09. Slide 06 : Perspectives d'Améliorations (Écrit direct sur le lavande)
+   -------------------------------------------------------------------------- */
+.perspectives-editorial-block {
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.persp-item-box {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.bullet-arrow {
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--border-color);
+}
+
+.persp-item-box p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  text-align: justify;
+}
+
+/* --------------------------------------------------------------------------
+   10. Slide 07 : Contact (Écrit direct sur le sable clair)
+   -------------------------------------------------------------------------- */
+.contact-editorial-card {
+  background: transparent;
+  color: var(--text-main);
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.contact-card-header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+}
+
+.contact-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.aka-light {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-link-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 24px;
+  border: 1.5px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.contact-link-row:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  transform: translateX(6px);
+}
+
+.contact-type {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  min-width: 110px;
+}
+
+.contact-link-row:hover .contact-type {
+  color: #ffee00;
+}
+
+.contact-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   11. Sticky Master Audio Player Bar (Ableton Style)
+   -------------------------------------------------------------------------- */
+.master-player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--player-height);
+  background: #000000;
+  color: #ffffff;
+  border-top: 2px solid var(--border-color);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.player-inner {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.player-info-col {
+  min-width: 260px;
+  max-width: 320px;
+  overflow: hidden;
+}
+
+.now-playing-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.now-playing-album {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-controls-col {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-grow: 1;
+  max-width: 640px;
+}
+
+.transport-btn {
+  background: #1c1c1e;
+  border: 1px solid #333;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.15s ease;
+}
+
+.transport-btn.main-play {
+  width: 40px;
+  height: 40px;
+  font-size: 1.05rem;
+  background: #fff;
+  color: #000;
+  border: none;
+}
+
+.transport-btn:hover {
+  background: var(--accent-yellow);
+  color: #000;
+}
+
+.scrubber-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.time-digit {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.progress-bar-track {
+  flex-grow: 1;
+  height: 6px;
+  background: #2a2a2e;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent-lime);
+}
+
+.player-vol-col {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vol-icon {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #888;
+}
+
+.vol-slider {
+  -webkit-appearance: none;
+  width: 70px;
+  height: 4px;
+  background: #333;
+  outline: none;
+}
+
+.vol-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   12. Minimal Lightbox
+   -------------------------------------------------------------------------- */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 24px;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+}
+
+.lightbox-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+  border: 2px solid #fff;
+  padding: 16px;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 2px solid #000;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   13. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .slide-grid-moi {
+    grid-template-columns: 1fr;
+  }
+  .album-layout {
+    grid-template-columns: 1fr;
+  }
+  .machina-visuals-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+  .site-nav {
+    display: none; /* Mobile navigation simplified */
+  }
+  .slide-section {
+    padding: 36px 20px;
+  }
+  #projets .album-block,
+  #lutherie .creation-block,
+  #en-cours .creation-block {
+    padding: 36px 20px;
+    margin-bottom: 16px;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-name {
+    font-size: 2.5rem;
+  }
+  .album-headline {
+    flex-direction: column;
+  }
+  .player-info-col {
+    min-width: 140px;
+  }
+  .player-vol-col {
+    display: none;
+  }
+}
