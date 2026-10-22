@@ -251,6 +251,12 @@ document.addEventListener('DOMContentLoaded', () => {
       enOpt.classList.toggle('active', lang === 'en');
     }
 
+    if (('ontouchstart' in window) || (navigator.maxTouchPoints > 0)) {
+      document.querySelectorAll('.flip-hint').forEach(hint => {
+        hint.textContent = lang === 'fr' ? 'toucher pour lire \u2192' : 'tap to read \u2192';
+      });
+    }
+
     try {
       localStorage.setItem('sirmarcel_lang_v2', lang);
     } catch (e) {}
@@ -271,6 +277,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch (e) {}
 
 
+  const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
   /* ==========================================================================
      02. FERRARI-STYLE DIAPORAMA SCROLL & SECTION REVEAL
      Sections smoothly appear as they enter viewport
@@ -284,7 +292,11 @@ document.addEventListener('DOMContentLoaded', () => {
         entry.target.classList.add('revealed');
         const id = entry.target.id;
         navLinks.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('data-target') === id);
+          const isActive = link.getAttribute('data-target') === id;
+          link.classList.toggle('active', isActive);
+          if (isActive && window.innerWidth <= 768) {
+            link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
         });
       }
     });
@@ -297,10 +309,26 @@ document.addEventListener('DOMContentLoaded', () => {
      03. FLIP CARD TAP SUPPORT (Mobile / Touch Devices)
      ========================================================================== */
   document.querySelectorAll('.flip-card-wrapper').forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
       card.classList.toggle('flipped');
     });
   });
+
+  // Tap outside anywhere to unflip active cards on mobile/tablet
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.flip-card-wrapper')) {
+      document.querySelectorAll('.flip-card-wrapper.flipped').forEach(c => {
+        c.classList.remove('flipped');
+      });
+    }
+  });
+
+  // Touch hint adaptation
+  if (isTouchDevice) {
+    document.querySelectorAll('.flip-hint').forEach(hint => {
+      hint.textContent = currentLang === 'fr' ? 'toucher pour lire \u2192' : 'tap to read \u2192';
+    });
+  }
 
 
   /* ==========================================================================
