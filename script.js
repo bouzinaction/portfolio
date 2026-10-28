@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>Drama est mon deuxième projet musical, je voulais quelque chose de beaucoup plus court avec des musiques plus « sombres ».</p>
         <p>Ce deuxième projet est, je trouve, moins abouti que le premier mais c'est en partie lié au fait que je le voyais plutôt comme un EP. Les musiques sont en général plus simplistes mais elles restent avec une identité qui me correspond.</p>
         <p>Ce projet m'a appris que c'est loin d'être plus facile de faire une musique qui « fonctionne » à la première écoute. La musique instrumentale a besoin d'être constamment en mouvement sans que cela se remarque parfois, que ce soit par le mix, en modulant les effets ou de par les mélodies : même une musique répétitive doit être pleine de mouvement.</p>
-        <p class="highlight-quote">C'est ce que j'ai essayé d'appliquer sur ce projet dont je suis également très fier !</p>
+        <p class="highlight-quote">Je suis content de ce projet qui a été formateur sur le plan de la composition</p>
       `,
       playlist_title: "Extraits sonores",
 
@@ -96,14 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       title_perspectives: "Mes perspectives d'améliorations",
       perspectives_body: `
-        <p>Durant ces prochaines années, j'aimerais améliorer mon jeu au clavier.</p>
         <div class="persp-item-box">
           <span class="bullet-arrow">&bull;</span>
           <p><strong>Améliorer mon niveau en mix :</strong> j'ai souvent appris par moi-même à travers des vidéos sur Internet où l'on entend beaucoup de conseils différents ; je n'ai jamais vraiment eu de recul sur mon travail concernant le mixage, j'aimerais développer cette compétence entouré par des gens compétents capables d'analyser mes points faibles et m'aider à les effacer.</p>
         </div>
         <div class="persp-item-box">
           <span class="bullet-arrow">&bull;</span>
-          <p>Comme beaucoup de musiciens qui composent, j'ai souvent laissé des projets à l'abandon sans jamais les terminer, c'est une chose que je suis en train d'améliorer mais qui est malheureusement toujours présente. J'ai acheté le livre « Comment finir ses morceaux » d'Adrien Perinot de la chaîne Projet Home Studio pour m'aider dans cette démarche.</p>
+          <p><strong>Comme beaucoup de musiciens qui composent, j'ai souvent laissé des projets à l'abandon sans jamais les terminer</strong>, c'est une chose que je suis en train d'améliorer mais qui est malheureusement toujours présente. J'ai acheté le livre « Comment finir ses morceaux » d'Adrien Perinot de la chaîne Projet Home Studio pour m'aider dans cette démarche.</p>
         </div>
         <div class="persp-item-box">
           <span class="bullet-arrow">&bull;</span>
@@ -111,12 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="persp-item-box">
           <span class="bullet-arrow">&bull;</span>
-          <p><strong>Je n'ai jamais fait de live</strong> (excepté 2-3 concerts étant petit à l'école de musique mais je considère qu'on ne le comptera pas), c'est quelque chose qui est dans ma tête depuis un certain temps, j'ai d'ailleurs récemment acheté mon premier contrôleur MIDI pour essayer de développer mon aisance à jouer et faire évoluer des morceaux en live.</p>
+          <p><strong>Je n'ai jamais fait de set live</strong> (excepté 2-3 concerts étant petit à l'école de musique mais je considère qu'on ne le comptera pas), c'est quelque chose qui est dans ma tête depuis un certain temps, j'ai d'ailleurs récemment acheté mon premier contrôleur MIDI pour essayer de développer mon aisance à jouer et faire évoluer des morceaux en live.</p>
         </div>
       `,
 
       title_contact: "Contact",
-      contact_heading: "Matéo Bouzidi <span class=\"aka-light\">(Siir Marcel)</span>"
+      contact_heading: "Matéo Bouzidi <span class=\"aka-light\">(Siir Marcel)</span>",
+      top_contact_email: "Email :",
+      top_contact_phone: "Téléphone :"
     },
 
     en: {
@@ -162,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>Drama is my second musical project. I wanted something much more concise with darker textures.</p>
         <p>I find this second project less comprehensive than the first, partly because I envisioned it more as an EP. The tracks are generally more stripped back, but they retain an identity that is authentically mine.</p>
         <p>This project taught me that making music that clicks on first listen is never easy. Instrumental music needs constant subtle motion—through mix modulations, automation, or melodic variations: even repetitive music must stay alive.</p>
-        <p class="highlight-quote">That is what I sought to implement on this project, of which I am also very proud!</p>
+        <p class="highlight-quote">I am pleased with this project, which was deeply formative in terms of musical composition.</p>
       `,
       playlist_title: "Audio Extracts",
 
@@ -204,14 +205,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       title_perspectives: "My Improvement Goals",
       perspectives_body: `
-        <p>Over the coming years, I want to improve my keyboard technique.</p>
         <div class="persp-item-box">
           <span class="bullet-arrow">&bull;</span>
           <p><strong>Improve my mixing level:</strong> I largely learned on my own through internet videos offering diverse advice; I never truly had objective critical feedback on my mixing. I want to build this skill surrounded by competent mentors who can diagnose and correct my weak points.</p>
         </div>
         <div class="persp-item-box">
           <span class="bullet-arrow">&bull;</span>
-          <p>Like many composing musicians, I have often left projects unfinished; this is something I am improving but which still happens. I purchased the book \"How to Finish Your Songs\" by Adrien Perinot (Projet Home Studio) to guide me in this process.</p>
+          <p><strong>Like many composing musicians, I have often left projects unfinished</strong>; this is something I am improving but which still happens. I purchased the book \"How to Finish Your Songs\" by Adrien Perinot (Projet Home Studio) to guide me in this process.</p>
         </div>
         <div class="persp-item-box">
           <span class="bullet-arrow">&bull;</span>
@@ -219,12 +219,14 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="persp-item-box">
           <span class="bullet-arrow">&bull;</span>
-          <p><strong>I have never performed live</strong> (apart from 2-3 childhood concerts at music school, which I don't count). This has been on my mind for a while; I recently purchased my first MIDI controller to develop ease in playing and evolving songs live.</p>
+          <p><strong>I have never performed a live set</strong> (apart from 2-3 childhood concerts at music school, which I don't count). This has been on my mind for a while; I recently purchased my first MIDI controller to develop ease in playing and evolving songs live.</p>
         </div>
       `,
 
       title_contact: "Contact",
-      contact_heading: "Matéo Bouzidi <span class=\"aka-light\">(Siir Marcel)</span>"
+      contact_heading: "Matéo Bouzidi <span class=\"aka-light\">(Siir Marcel)</span>",
+      top_contact_email: "Email:",
+      top_contact_phone: "Phone:"
     }
   };
 

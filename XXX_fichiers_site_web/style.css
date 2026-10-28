@@ -373,6 +373,67 @@ a {
   padding-bottom: 12px;
 }
 
+.section-label-bar-moi {
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.section-label-title-group {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+/* Rubrique Contact Rapide en Haut à Droite dans Moi */
+.moi-top-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.moi-top-contact-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1.5px solid var(--border-color);
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+  line-height: 1.3;
+}
+
+.moi-top-contact-link:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  transform: translateX(-4px);
+}
+
+.moi-top-contact-type {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+.moi-top-contact-link:hover .moi-top-contact-type {
+  color: #ffee00;
+}
+
+.moi-top-contact-val {
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
 .section-index {
   font-family: var(--font-mono);
   font-size: 1.15rem;
@@ -1639,6 +1700,30 @@ a {
     margin-bottom: 20px;
     padding-bottom: 10px;
     gap: 10px;
+  }
+
+  .section-label-bar-moi {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .moi-top-contact {
+    align-items: stretch;
+    width: 100%;
+    margin-left: 0;
+    gap: 8px;
+  }
+
+  .moi-top-contact-link {
+    justify-content: space-between;
+    padding: 10px 14px;
+    min-height: 44px;
+    font-size: 0.95rem;
+  }
+
+  .moi-top-contact-link:hover {
+    transform: none;
   }
 
   .section-index {
