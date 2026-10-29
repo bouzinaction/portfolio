@@ -1148,9 +1148,16 @@ a {
   padding: 12px 0 10px 0;
 }
 
-.stage-gallery-grid {
-  grid-template-columns: repeat(3, 130px) !important;
-  gap: 12px;
+#autres-projets .gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+#autres-projets .gallery-card {
+  flex: 0 0 calc((100% - 70px) / 6);
+  width: calc((100% - 70px) / 6);
 }
 
 .gallery-card {
@@ -1590,6 +1597,11 @@ a {
     gap: 12px;
   }
 
+  #autres-projets .gallery-card {
+    flex: 0 0 calc((100% - 24px) / 3);
+    width: calc((100% - 24px) / 3);
+  }
+
   .machina-visuals-grid {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -1969,9 +1981,13 @@ a {
     padding: 8px 0;
   }
 
-  .stage-gallery-grid {
-    grid-template-columns: repeat(3, 100px) !important;
-    gap: 8px;
+  #autres-projets .gallery-grid {
+    gap: 10px;
+  }
+
+  #autres-projets .gallery-card {
+    flex: 0 0 calc((100% - 10px) / 2);
+    width: calc((100% - 10px) / 2);
   }
 
   /* 07. Section 05 : Projets en cours */
