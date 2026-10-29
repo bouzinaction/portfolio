@@ -535,6 +535,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const src = img.getAttribute('src');
       const cap = img.getAttribute('data-caption') || img.getAttribute('alt') || '';
       hoverImg.src = src;
+      const zoomBox = hoverViewer.querySelector('.hover-zoom-box');
+      if (zoomBox) {
+        zoomBox.classList.toggle('zoom-small', !!img.closest('.stage-gallery-grid'));
+      }
       if (hoverCap) {
         hoverCap.textContent = cap;
         hoverCap.style.display = cap ? 'inline-block' : 'none';
