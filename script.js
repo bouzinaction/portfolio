@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_lutherie: "Lutherie",
       nav_encours: "En cours",
       nav_perspectives: "Perspectives",
+      nav_autres_projets: "Autres projets",
       nav_contact: "Contact",
 
       title_moi: "Moi",
@@ -114,6 +115,21 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `,
 
+      title_autres_projets: "Autres projets",
+      other_proj1_title: "Projet de stage",
+      other_proj1_body: `
+        <p>Lors de mon stage d'assistant de recherche à l'Université de Canterbury (Nouvelle-Zélande), j'ai instrumenté une trottinette électrique avec des accéléromètres pour effectuer des mesures en conditions réelles. Ce projet m'a fait découvrir le monde de l'Arduino, j'ai notamment utilisé l'agent IA d'Antigravity pour coder et flasher directement les microcontrôleurs.</p>
+        <p>J'ai mené à bien toutes les expériences en mettant en place un protocole de test rigoureux, incluant une communication sans fil entre les appareils et l'analyse des données. Le domaine vibratoire étant très proche de l'audio, j'ai pu donner un sens mathématique et concret aux concepts que j'utilise quotidiennement dans ma pratique musicale (résonance, filtre, analyse spectrale, bruit, réponse fréquentielle…).</p>
+      `,
+      other_proj2_title: "Volant de simulateur de course automobile",
+      other_proj2_body: `
+        <p>Ma deuxième passion après la musique reste le sport automobile. Après avoir discuté avec un ami, j'ai découvert qu'il était possible de fabriquer son propre volant de course réplique. J'ai choisi de fabriquer celui de la Ferrari 296 GT3. Ce projet a été mon tout premier contenant de l'électronique. Grâce à l'aide de mon ami, j'ai été guidé dans l'achat des composants, le câblage et la soudure à l'étain. Le volant est aujourd'hui 100 % fonctionnel !</p>
+      `,
+      other_proj3_title: "Modèle de turbine Solar à imprimer en 3D",
+      other_proj3_body: `
+        <p>Ce projet part au départ d'une idée de cadeau pour mon père. Je voulais imprimer un modèle réduit de turbine à gaz avec mon imprimante 3D pour son bureau. N'ayant rien trouvé en ligne de convaincant, j'ai décidé de la dessiner moi-même en 3D. Cela a mis à rude épreuve mes compétences en CAO, mais j'ai pu compléter l'entièreté du design en moins de 3 jours sur Catia V5. Je suis plutôt content du rendu final (lui aussi !) et j'ai fini par mettre en vente les fichiers sur un site internet dédié. J'ai déjà eu 4 clients !!</p>
+      `,
+
       title_contact: "Contact",
       contact_heading: "Matéo Bouzidi <span class=\"aka-light\">(Siir Marcel)</span>",
       top_contact_email: "Email :",
@@ -127,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_lutherie: "Craft & Luthiery",
       nav_encours: "In Progress",
       nav_perspectives: "Goals",
+      nav_autres_projets: "Other Projects",
       nav_contact: "Contact",
 
       title_moi: "About Me",
@@ -221,6 +238,21 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="bullet-arrow">&bull;</span>
           <p><strong>I have never performed a live set</strong> (apart from 2-3 childhood concerts at music school, which I don't count). This has been on my mind for a while; I recently purchased my first MIDI controller to develop ease in playing and evolving songs live.</p>
         </div>
+      `,
+
+      title_autres_projets: "Other Projects",
+      other_proj1_title: "Internship Research Project",
+      other_proj1_body: `
+        <p>During my research assistant internship at the University of Canterbury (New Zealand), I instrumented an electric scooter with accelerometers to perform real-world measurements. This project introduced me to the world of Arduino; I notably used the Antigravity AI agent to code and flash the microcontrollers directly.</p>
+        <p>I carried out all the experiments by setting up a rigorous testing protocol, including wireless communication between devices and data analysis. Since the field of vibrations is very close to audio, I was able to give a mathematical and concrete meaning to concepts I use daily in my musical practice (resonance, filtering, spectral analysis, noise, frequency response…).</p>
+      `,
+      other_proj2_title: "Sim Racing Steering Wheel",
+      other_proj2_body: `
+        <p>My second passion after music is motorsport. After talking with a friend, I discovered that it was possible to build my own replica racing steering wheel. I chose to build the Ferrari 296 GT3 wheel. This project was my very first involving electronics. Thanks to my friend's help, I was guided through buying components, wiring, and tin soldering. The steering wheel is now 100% functional!</p>
+      `,
+      other_proj3_title: "3D-Printable Solar Gas Turbine Model",
+      other_proj3_body: `
+        <p>This project originally started as a gift idea for my father. I wanted to print a scale model of a gas turbine with my 3D printer for his desk. Having found nothing convincing online, I decided to design it myself in 3D. It put my CAD skills to the test, but I managed to complete the entire design in under 3 days on Catia V5. I am pretty happy with the final result (and so is he!) and I ended up putting the files up for sale on a dedicated website. I've already had 4 customers!!</p>
       `,
 
       title_contact: "Contact",

@@ -38,8 +38,11 @@
   --color-sec6: #b1c5ff;        /* Point 6 (Perspectives) : Bleu lavande Ableton --c7-bg: rgb(177, 197, 255) */
   --color-sec6-accent: #9cb4fd;
 
-  --color-sec7: #fbffa7;        /* Point 7 (Contact) : 2ème Jaune Ableton --c14-bg: rgb(251, 255, 167) */
-  --color-sec7-accent: #ebf073;
+  --color-sec7: #febf88;        /* Point 7 (Autres projets) : Orange pastel Ableton --c21-bg: rgb(254, 191, 136) */
+  --color-sec7-accent: #ffa85c;
+
+  --color-sec8: #fbffa7;        /* Point 8 (Contact) : 2ème Jaune Ableton --c14-bg: rgb(251, 255, 167) */
+  --color-sec8-accent: #ebf073;
 
   /* Accents et Couleurs Spécifiques du site Ableton */
   --accent-yellow: #fdf900;      /* Jaune signature Ableton --c20-bg */
@@ -153,7 +156,8 @@ a {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  white-space: nowrap;
 }
 
 .nav-link {
@@ -355,12 +359,33 @@ a {
   color: #000;
 }
 
+#autres-projets {
+  background-color: transparent !important;
+  padding: 0 !important;
+  min-height: auto;
+}
+#autres-projets .section-index {
+  background: var(--color-sec7);
+  border: 1.5px solid var(--border-color);
+  color: #000;
+}
+#autres-projets .creation-block {
+  background-color: var(--color-sec7); /* Orange pastel Ableton --c21-bg */
+  padding: 56px 48px;
+  margin-bottom: 24px;
+  border: none;
+  box-shadow: none;
+}
+#autres-projets .creation-block:last-of-type {
+  margin-bottom: 0;
+}
+
 #contact {
-  background-color: var(--color-sec7); /* 2ème Jaune Ableton --c14-bg */
+  background-color: var(--color-sec8); /* 2ème Jaune Ableton --c14-bg */
 }
 #contact .section-index {
   background: #000000;
-  color: var(--color-sec7);
+  color: var(--color-sec8);
 }
 
 /* Barre de Titre de Section */
@@ -1121,6 +1146,10 @@ a {
   padding: 12px 0 10px 0;
 }
 
+#autres-projets .gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
 .gallery-card {
   width: 100%;
   display: flex;
@@ -1691,7 +1720,8 @@ a {
 
   #projets .album-block,
   #lutherie .creation-block,
-  #en-cours .creation-block {
+  #en-cours .creation-block,
+  #autres-projets .creation-block {
     padding: 26px 16px;
     margin-bottom: 16px;
   }
@@ -1930,7 +1960,8 @@ a {
     font-size: clamp(1.35rem, 5.5vw, 1.65rem);
   }
 
-  .gallery-grid {
+  .gallery-grid,
+  #autres-projets .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 8px 0;
